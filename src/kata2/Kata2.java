@@ -2,6 +2,7 @@ package kata2;
 import java.util.HashMap;
 import java.util.Map;
 
+//version 2.0
 public class Kata2 {
     public static void main(String[] args) {
         
@@ -10,14 +11,17 @@ public class Kata2 {
         //array asociativo histograma (clave entera, valor entero)
         Map<Integer,Integer> histogram = new HashMap<>();
         
-        //atajazo ( fori + Tab )
+        //cambiamos el for por un for del tipo (fore+Tab) con operador ternario
         
-        for (int i = 0; i < data.length; i++) {
-            //si no encontramos la clave, la incluimos en el array e inicializamos su valor a 0
-            if (!histogram.containsKey(data[i])){
-                histogram.put(data[i],0);
-        }
-            histogram.put(data[i], histogram.get(data[i])+1);
+        //este tipo de bucle, guarda el valor de la iteracion n del array data 
+        //en value
+        
+        for (int value : data) {
+            
+            //operador ternario (condicion) ? valor1:valor2; si la condicion es
+            //true se cumple el valor 1 si es false el valor 2
+            
+            histogram.put(value, histogram.containsKey(value) ? histogram.get(value)+1 : 1);
         }
         //atajazo 2 fore + TAB
         for (int key : histogram.keySet()) {
