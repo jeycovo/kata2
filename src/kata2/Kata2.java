@@ -11,7 +11,7 @@ public class Kata2 {
         Histogram histo = new Histogram(data);
         Map<String,Integer> histogr = histo.getHistogram();
         //cambiamos el for por un for del tipo (fore+Tab) con operador ternario
-        
+         
 
         //atajazo 2 fore + TAB
         
